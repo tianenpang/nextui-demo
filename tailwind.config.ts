@@ -13,19 +13,11 @@ const config: Config = {
       }
     },
     screens: {
-      '2xl': '2000px',
-      '3xl': '2400px',
-      '560': '560px',
-      '750': '750px',
-      'archive-mobile': '450px',
-      lg: '1200px',
-      md: '900px',
-      'navigation-desktop': '1000px',
-      'navigation-mobile': '500px',
-      sm: '640px',
-      'team-mobile': '450px',
-      xl: '1600px',
-      xs: '340px'
+      'custom-2xl': '1536px',
+      'custom-lg': '1024px',
+      'custom-md': '768px',
+      'custom-sm': '640px',
+      'custom-xl': '1280px'
     }
   }
 };

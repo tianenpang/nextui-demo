@@ -33,7 +33,7 @@ const RootPage = () => {
     <main className="relative min-h-dvh w-full">
       <div
         className={responsiveTV({
-          layout: { initial: 'vertical', xs: 'horizontal' }
+          layout: { 'custom-sm': 'horizontal', initial: 'vertical' }
         })}
       >
         <div className={item({ color: 'amber' })}>1</div>
