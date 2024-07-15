@@ -11,8 +11,6 @@
     "clean:cache": "find . \\( -name '.next' -o -name 'node_modules' \\) -type d -prune -exec rm -rf '{}' +"
   },
   "dependencies": {
-    "@nextui-org/link": "2.0.32",
-    "@nextui-org/listbox": "2.1.22",
     "@nextui-org/react": "2.4.2",
     "framer-motion": "11.3.2",
     "geist": "1.3.1",
@@ -26,8 +24,8 @@
     "@types/node": "20.14.10",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "@typescript-eslint/eslint-plugin": "7.11.0",
-    "@typescript-eslint/parser": "7.11.0",
+    "@typescript-eslint/eslint-plugin": "7.16.0",
+    "@typescript-eslint/parser": "7.16.0",
     "autoprefixer": "10.4.19",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
@@ -50,5 +48,5 @@
     "pnpm": ">=9.x",
     "node": ">=20.x"
   },
-  "packageManager": "pnpm@9.1.3"
+  "packageManager": "pnpm@9.5.0"
 }

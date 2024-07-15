@@ -4,7 +4,7 @@ import { withTV } from 'tailwind-variants/transformer';
 import DefaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {

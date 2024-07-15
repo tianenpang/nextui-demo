@@ -2,13 +2,12 @@
 
 import { tv } from 'tailwind-variants';
 
-const filterList = tv(
+const responsiveTV = tv(
   {
-    base: 'mt-2 flex items-start gap-2',
+    base: 'flex gap-4',
     variants: {
       layout: {
-        horizontal:
-          'flex-row mb-2 box-[mx*-1] box-px overflow-y-hidden overflow-x-scroll [-ms-overflow-style:none] scrollbar-width-none [&::-webkit-scrollbar]:hidden',
+        horizontal: 'flex-row',
         vertical: 'flex-col'
       }
     }
@@ -16,18 +15,32 @@ const filterList = tv(
   { responsiveVariants: true }
 );
 
+const item = tv({
+  base: 'flex aspect-square w-16 items-center justify-center rounded font-semibold',
+  variants: {
+    color: {
+      amber: 'bg-amber-500 text-amber-50',
+      cyan: 'bg-cyan-500 text-cyan-50',
+      emerald: 'bg-emerald-500 text-emerald-50',
+      lime: 'bg-lime-500 text-lime-50',
+      violet: 'bg-violet-500 text-violet-50'
+    }
+  }
+});
+
 const RootPage = () => {
   return (
-    <main className="flex min-h-screen w-full flex-col items-center justify-center gap-6">
+    <main className="relative min-h-dvh w-full">
       <div
-        className={filterList({
-          layout: { initial: 'horizontal', xs: 'vertical' }
+        className={responsiveTV({
+          layout: { initial: 'vertical', xs: 'horizontal' }
         })}
       >
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+        <div className={item({ color: 'amber' })}>1</div>
+        <div className={item({ color: 'cyan' })}>2</div>
+        <div className={item({ color: 'emerald' })}>3</div>
+        <div className={item({ color: 'lime' })}>4</div>
+        <div className={item({ color: 'violet' })}>5</div>
       </div>
     </main>
   );
