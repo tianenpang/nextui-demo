@@ -1,0 +1,19 @@
+[production]
+Edge 79
+Opera 51
+Chrome 64
+Safari 12
+Firefox 67
+
+[modern]
+last 5 chrome version
+last 5 safari version
+last 5 firefox version
+
+[development]
+last 1 chrome version
+last 1 safari version
+last 1 firefox version
+
+[ssr]
+node 20

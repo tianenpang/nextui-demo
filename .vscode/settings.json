@@ -1,0 +1,29 @@
+{
+  "npm.packageManager": "pnpm",
+  "scss.lint.unknownAtRules": "ignore",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": false,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "files.associations": {
+    "**/.vscode/*.json": "jsonc"
+  }
+}

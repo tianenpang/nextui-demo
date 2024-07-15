@@ -6,21 +6,49 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "pnpm clean:cache && pnpm i && pnpm i --fix-lockfile",
+    "clean:cache": "find . \\( -name '.next' -o -name 'node_modules' \\) -type d -prune -exec rm -rf '{}' +"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.3"
+    "@nextui-org/link": "2.0.32",
+    "@nextui-org/listbox": "2.1.22",
+    "@nextui-org/react": "2.4.2",
+    "framer-motion": "11.3.2",
+    "geist": "1.3.1",
+    "next": "14.2.5",
+    "next-themes": "0.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-variants": "0.2.1"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3"
-  }
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "7.11.0",
+    "@typescript-eslint/parser": "7.11.0",
+    "autoprefixer": "10.4.19",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.5",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.9.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-react": "7.34.4",
+    "eslint-plugin-sort-destructure-keys": "2.0.0",
+    "eslint-plugin-sort-keys-fix": "1.1.2",
+    "eslint-plugin-unused-imports": "4.0.0",
+    "postcss": "8.4.39",
+    "prettier": "3.3.3",
+    "prettier-plugin-tailwindcss": "0.6.5",
+    "sass": "1.77.8",
+    "tailwindcss": "3.4.4",
+    "typescript": "5.5.3"
+  },
+  "engines": {
+    "pnpm": ">=9.x",
+    "node": ">=20.x"
+  },
+  "packageManager": "pnpm@9.1.3"
 }

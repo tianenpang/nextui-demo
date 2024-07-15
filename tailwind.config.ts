@@ -1,20 +1,33 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
+
+import { withTV } from 'tailwind-variants/transformer';
+import DefaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'],
+  darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      fontFamily: {
+        sans: ['var(--font-geist-sans)', ...DefaultTheme.fontFamily.sans]
+      }
     },
-  },
-  plugins: [],
+    screens: {
+      '2xl': '2000px',
+      '3xl': '2400px',
+      '560': '560px',
+      '750': '750px',
+      'archive-mobile': '450px',
+      lg: '1200px',
+      md: '900px',
+      'navigation-desktop': '1000px',
+      'navigation-mobile': '500px',
+      sm: '640px',
+      'team-mobile': '450px',
+      xl: '1600px',
+      xs: '340px'
+    }
+  }
 };
-export default config;
+
+export default withTV(config);
